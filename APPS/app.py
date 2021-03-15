@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from APPS.secure import *
 import datetime, time
 from flask_cors import *
+from APPS.reptile.public import *
 
 app = Flask(__name__, static_folder="./static", template_folder="./templates")
 app.secret_key = "yuxudong123412313123"
@@ -34,11 +35,12 @@ users = [
     # 日本用户
     User(3, "@zhangning@.com", "@zhangning@", 2),
     User(8, "@muhe@.com", "@muhe@", 2),
-    User(9, "@wangfang@.com", "@wangfang@", 2),
+    User(9, "@wangfang@.com", "@wangfang@", 3),
     User(10, "@liuyanan@.com", "@liuyanan@", 2),
 
     # ap、sat、act
     User(14, "@yuxudong@.com", "@yuxudong@", 3),
+    User(15, "@wangfan@asc.com", "@wangfan@", 3),
 
 ]
 

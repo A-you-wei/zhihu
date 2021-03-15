@@ -1,4 +1,3 @@
-import requests
 from APPS.setting import *
 import json
 
