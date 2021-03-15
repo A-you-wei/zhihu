@@ -79,68 +79,66 @@ class SendData:
 
 
 if __name__ == '__main__':
-    send = SendData()
-    send.response_source_one()
-    # while True:
-    #     ymd = str(datetime.datetime.now().year) + '-' + str(datetime.datetime.now().month) + '-' + str(
-    #         datetime.datetime.now().day)
-    #     hms = str(datetime.datetime.now().hour) + ':' + str(datetime.datetime.now().minute) + ':' + str(
-    #         datetime.datetime.now().second)
-    #     requests.adapters.DEFAULT_RETRIES = 5
-    #     s = requests.session()
-    #     s.keep_alive = False
-    #     if int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
-    #             time.mktime(time.strptime(str(ymd + ' ' + '08:30:00'), "%Y-%m-%d %H:%M:%S"))):
-    #         send = SendData()
-    #         send.response_source_one()
-    #     elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
-    #             time.mktime(time.strptime(str(ymd + ' ' + '09:00:00'), "%Y-%m-%d %H:%M:%S"))):
-    #         send = SendData()
-    #         send.response_source_one()
-    #     elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
-    #             time.mktime(time.strptime(str(ymd + ' ' + '09:30:00'), "%Y-%m-%d %H:%M:%S"))):
-    #         send = SendData()
-    #         send.response_source_one()
-    #     elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
-    #             time.mktime(time.strptime(str(ymd + ' ' + '10:30:00'), "%Y-%m-%d %H:%M:%S"))):
-    #         send = SendData()
-    #         send.response_source_one()
-    #     elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
-    #             time.mktime(time.strptime(str(ymd + ' ' + '11:30:00'), "%Y-%m-%d %H:%M:%S"))):
-    #         send = SendData()
-    #         send.response_source_one()
-    #     elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
-    #             time.mktime(time.strptime(str(ymd + ' ' + '13:30:00'), "%Y-%m-%d %H:%M:%S"))):
-    #         send = SendData()
-    #         send.response_source_one()
-    #     elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
-    #             time.mktime(time.strptime(str(ymd + ' ' + '14:30:00'), "%Y-%m-%d %H:%M:%S"))):
-    #         send = SendData()
-    #         send.response_source_one()
-    #     elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
-    #             time.mktime(time.strptime(str(ymd + ' ' + '15:30:00'), "%Y-%m-%d %H:%M:%S"))):
-    #         send = SendData()
-    #         send.response_source_one()
-    #     elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
-    #             time.mktime(time.strptime(str(ymd + ' ' + '16:30:00'), "%Y-%m-%d %H:%M:%S"))):
-    #         send = SendData()
-    #         send.response_source_one()
-    #     elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
-    #             time.mktime(time.strptime(str(ymd + ' ' + '17:30:00'), "%Y-%m-%d %H:%M:%S"))):
-    #         send = SendData()
-    #         send.response_source_one()
-    #     elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
-    #             time.mktime(time.strptime(str(ymd + ' ' + '18:30:00'), "%Y-%m-%d %H:%M:%S"))):
-    #         send = SendData()
-    #         send.response_source_one()
-    #     elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
-    #             time.mktime(time.strptime(str(ymd + ' ' + '19:30:00'), "%Y-%m-%d %H:%M:%S"))):
-    #         send = SendData()
-    #         send.response_source_one()
-    #     elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
-    #             time.mktime(time.strptime(str(ymd + ' ' + '20:30:00'), "%Y-%m-%d %H:%M:%S"))):
-    #         send = SendData()
-    #         send.response_source_one()
-    #     else:
-    #         time.sleep(1)
-    #         print('不是获取的时间，请等待... ...')
+    while True:
+        ymd = str(datetime.datetime.now().year) + '-' + str(datetime.datetime.now().month) + '-' + str(
+            datetime.datetime.now().day)
+        hms = str(datetime.datetime.now().hour) + ':' + str(datetime.datetime.now().minute) + ':' + str(
+            datetime.datetime.now().second)
+        requests.adapters.DEFAULT_RETRIES = 5
+        s = requests.session()
+        s.keep_alive = False
+        if int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
+                time.mktime(time.strptime(str(ymd + ' ' + '08:30:00'), "%Y-%m-%d %H:%M:%S"))):
+            send = SendData()
+            send.response_source_one()
+        elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
+                time.mktime(time.strptime(str(ymd + ' ' + '09:00:00'), "%Y-%m-%d %H:%M:%S"))):
+            send = SendData()
+            send.response_source_one()
+        elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
+                time.mktime(time.strptime(str(ymd + ' ' + '09:30:00'), "%Y-%m-%d %H:%M:%S"))):
+            send = SendData()
+            send.response_source_one()
+        elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
+                time.mktime(time.strptime(str(ymd + ' ' + '10:30:00'), "%Y-%m-%d %H:%M:%S"))):
+            send = SendData()
+            send.response_source_one()
+        elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
+                time.mktime(time.strptime(str(ymd + ' ' + '11:30:00'), "%Y-%m-%d %H:%M:%S"))):
+            send = SendData()
+            send.response_source_one()
+        elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
+                time.mktime(time.strptime(str(ymd + ' ' + '13:30:00'), "%Y-%m-%d %H:%M:%S"))):
+            send = SendData()
+            send.response_source_one()
+        elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
+                time.mktime(time.strptime(str(ymd + ' ' + '14:30:00'), "%Y-%m-%d %H:%M:%S"))):
+            send = SendData()
+            send.response_source_one()
+        elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
+                time.mktime(time.strptime(str(ymd + ' ' + '15:30:00'), "%Y-%m-%d %H:%M:%S"))):
+            send = SendData()
+            send.response_source_one()
+        elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
+                time.mktime(time.strptime(str(ymd + ' ' + '16:30:00'), "%Y-%m-%d %H:%M:%S"))):
+            send = SendData()
+            send.response_source_one()
+        elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
+                time.mktime(time.strptime(str(ymd + ' ' + '17:30:00'), "%Y-%m-%d %H:%M:%S"))):
+            send = SendData()
+            send.response_source_one()
+        elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
+                time.mktime(time.strptime(str(ymd + ' ' + '18:30:00'), "%Y-%m-%d %H:%M:%S"))):
+            send = SendData()
+            send.response_source_one()
+        elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
+                time.mktime(time.strptime(str(ymd + ' ' + '19:30:00'), "%Y-%m-%d %H:%M:%S"))):
+            send = SendData()
+            send.response_source_one()
+        elif int(time.mktime(time.strptime(str(ymd + ' ' + hms), "%Y-%m-%d %H:%M:%S"))) == int(
+                time.mktime(time.strptime(str(ymd + ' ' + '20:30:00'), "%Y-%m-%d %H:%M:%S"))):
+            send = SendData()
+            send.response_source_one()
+        else:
+            time.sleep(1)
+            print('不是获取的时间，请等待... ...')
